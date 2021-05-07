@@ -13,8 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kxxg.mvvmcha.base.utils.view.ScaleTransitionPagerTitleView
-import me.hgj.jetpackmvvm.base.appContext
-import me.hgj.jetpackmvvm.ext.util.toHtml
+import com.zhixinhuixue.library.common.base.appContext
 import net.lucode.hackware.magicindicator.MagicIndicator
 import net.lucode.hackware.magicindicator.buildins.UIUtil
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
@@ -146,7 +145,7 @@ fun BaseQuickAdapter<*, *>.setAdapterAnimation(mode: Int) {
     }
 }
 
-fun MagicIndicator.bindViewPager2(
+/*fun MagicIndicator.bindViewPager2(
     viewPager: ViewPager2,
     mStringList: List<String> = arrayListOf(),
     action: (index: Int) -> Unit = {}) {
@@ -211,7 +210,7 @@ fun MagicIndicator.bindViewPager2(
             this@bindViewPager2.onPageScrollStateChanged(state)
         }
     })
-}
+}*/
 
 fun ViewPager2.init(
     fragment: Fragment,

@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @Keep
-data class UserInfo(
+data class UserInfoBean(
     val accid: String = "",
     val account: String = "",
     val address: String = "",

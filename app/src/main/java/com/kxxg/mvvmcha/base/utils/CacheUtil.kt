@@ -3,27 +3,27 @@ package com.kxxg.mvvmcha.base.utils
 import android.text.TextUtils
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.kxxg.mvvmcha.data.model.bean.UserInfo
+import com.kxxg.mvvmcha.data.model.bean.UserInfoBean
 import com.tencent.mmkv.MMKV
 
 object CacheUtil {
     /**
      * 获取保存的账户信息
      */
-    fun getUser(): UserInfo? {
+    fun getUser(): UserInfoBean? {
         val kv = MMKV.mmkvWithID("app")
         val userStr = kv.decodeString("user")
         return if (TextUtils.isEmpty(userStr)) {
            null
         } else {
-            Gson().fromJson(userStr, UserInfo::class.java)
+            Gson().fromJson(userStr, UserInfoBean::class.java)
         }
     }
 
     /**
      * 设置账户信息
      */
-    fun setUser(userResponse: UserInfo?) {
+    fun setUser(userResponse: UserInfoBean?) {
         val kv = MMKV.mmkvWithID("app")
         if (userResponse == null) {
             kv.encode("user", "")

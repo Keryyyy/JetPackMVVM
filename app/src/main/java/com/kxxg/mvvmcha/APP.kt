@@ -1,6 +1,6 @@
 package com.kxxg.mvvmcha
 
-import me.hgj.jetpackmvvm.base.BaseApp
+import com.zhixinhuixue.library.common.base.BaseApplication
 
 /**
  * <pre>
@@ -11,6 +11,9 @@ import me.hgj.jetpackmvvm.base.BaseApp
  *
  * </pre>
  */
-class APP:BaseApp() {
+class APP:BaseApplication() {
 
+    override fun onCreate() {
+        super.onCreate()
+    }
 }
